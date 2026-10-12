@@ -1,0 +1,23 @@
+# Dependencies and build output
+node_modules/
+dist/
+bin/
+obj/
+
+# Secrets and local environment config - never commit
+.env
+.env.*
+!.env.example
+*.local
+
+# Editor / OS
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
