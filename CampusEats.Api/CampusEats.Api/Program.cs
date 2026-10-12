@@ -89,6 +89,9 @@ app.UseCors("Frontend"); // before MapControllers()
 app.UseAuthentication(); // who are you? (validates JWT)
 app.UseAuthorization();  // may you?     (checks roles)
 
+// the bare service URL has no page of its own - send it to the API docs
+app.MapGet("/", () => Results.Redirect("/swagger")).ExcludeFromDescription();
+
 app.MapControllers();
 
 app.Run();
